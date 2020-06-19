@@ -1,0 +1,9 @@
+if($obhovo == "quyowga"){
+        echo"kocaga ciqvur";
+    }
+    elseif($obhovo == "qorga"){
+        echo"qor yogvotti";
+    }else {
+        echo"jinni bop qopsan bulutliku";
+    }
+    
