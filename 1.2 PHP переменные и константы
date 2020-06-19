@@ -1,0 +1,24 @@
+ozgaruvchilar phpda $ belgisi bilan yaratilinadi 
+$var = "kotta holen"; buni turi string yani yozu yani qator qisqacha str
+$var2 = 5; buni turi integer yani butun son qisqacha int
+$var3 = 1.5; buni turi kasr son float 
+$var4 = true; buni turi boolean yani mantiqiy qiymat (true false) qisqacha bool
+$var6 = $var2+$var3;
+$var5 = "kottaholen {$var6} ga tent";
+
+ozgaruvchini ichida ozgaruvchini iwlatsa boladi
+
+define("PAGE", "new page"); bu konstanta dep nomlanadi konstantani ozgaruvchilardan farqi 1 marotaba iwlatilinadi va nomi 
+KOTTA HARFLA BILAN YOZILADI
+
+$this;
+$GLOBALS;
+$_SERVER;
+$_GET;
+$_POST;
+$_FILES;
+$_REQUEST;
+$_SESSION;
+$_ENV;
+$_COOKIE;
+wu ozgaruvchilarni yaratip bolmaydi chunki phpda ozi wundoyam bor
