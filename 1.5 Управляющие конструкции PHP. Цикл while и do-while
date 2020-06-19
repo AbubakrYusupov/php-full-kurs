@@ -1,0 +1,5 @@
+ЦИКЛ bu kop martta birhil iw bajariliwi ЦИКЛda shart bajarilmagunigacha berilgan harakat iwlivuradi 
+$var = 0;
+    while($var < 10){
+        echo $var++;
+    }
