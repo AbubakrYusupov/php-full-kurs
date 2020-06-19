@@ -3,3 +3,33 @@ $var = 0;
     while($var < 10){
         echo $var++;
     }
+    
+ for($i = 1; $1 < 11; $i++){
+    echo $i . "<br>"
+ }
+ fori whiledan farqi ozgaruvchini ЦИКЛNI icida elon qilib ЦИКЛ harakatini va ЦИКЛni hammasini forni warti ichida bajarib bolishligi
+
+$names = array(
+    'oti' => 'Amir',
+    'oti' => 'Amir2',
+    'oti' => 'Amir3', 
+);
+
+
+foreach($names as $item){
+    echo $item . '<br>';
+}
+foreach fordan farqi id tartibi bizilgan taqdirdaham iwlayveradi wartida massiv nomi kalit soz as bilan ozgaruvchiga ($var) wunday
+beriladi va ЦИКЛ ichida chiqariladi
+
+$names = array(
+    'oti' => 'Amir',
+    'oti' => 'Amir2',
+    'oti' => 'Amir3', 
+);
+
+foreach($names as $key => $name){
+    echo "Name: $key, Surname: $name";
+}
+foreach bilan massiv kalitini ham ciqarsa boladi bunga tepadigi kod yorqin misol bola oladi
+
