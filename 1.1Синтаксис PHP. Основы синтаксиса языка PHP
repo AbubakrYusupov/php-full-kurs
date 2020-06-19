@@ -1,0 +1,30 @@
+php sever tili htmlga oxwap faylga bossa ocmoqci bosa sayt iwlamidi sayt iwlawi uchun server iwga tuwuwi kere 
+php fayl index.php shunday .php bilan yaratilinadi php faylda html kod muamosiz bemalol iwlidi
+
+<?php
+    echo "hello world";
+    echo "dasdasdasd"
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+
+php kod yoziw uchun <?php mawi teg ochiladi ?> bunda yopiladi va wu tegni ichidigi hamma kod iwlidi agar wu tegdan tawqarida bolsa kod
+iwlamidi.
+phpda ham  kamentariya bor u 
+// bu 1 qatorli kamentariya
+/*
+bu 
+kop
+qatorli
+komentariya
+*/
+komentariyala kodga tarif beriw uchun iwlatilinadi komentariya ichidigi kodlani php iwlatmidi
