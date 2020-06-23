@@ -56,5 +56,6 @@ kop
 qatorli 
 komentariya
 */
-constant kodi saytda 1 marotaba ishlatiladi bowqa iwlat bomidi constant kodi define dip yoziladi constant dipemas
-constant varga oxwwagan ozgaruvchi
+constant kodi saytda 1 marotaba ishlatiladi bowqa iwlat bomidi constant kodi define dip yozsayam const dip yozsayam boladi
+define('PAGE', 'new page'); defineda bunaqa yoziladi agar class bilan iwlatilinmasa define yoziladi
+const PAGE2 = 'new const'; constda bunaqa yoziladi agarda class bilan iwlatilsa const yoziladi
