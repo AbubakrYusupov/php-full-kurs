@@ -1,0 +1,58 @@
+Php fayl ochvotkanimda index.php yoziladi agarda index.html yozsam php iwlamidi php faylda hamma narsa iwlidi htmlam, cssam, javascriptam .
+<?php
+
+?>
+phpga ubu kodni teriw uchun tepadagi kodni ichiga yozish kerak bomasa hich balo ishlamidi
+
+echo kodi ekranga nmadur yoziwga kere boladi hudda javascriptdagi alert yoki console.log kabi
+
+    <?php
+$tovar = array(
+  'tovar1' => array(
+      'name' => 'limax',
+        'price' => '5000',
+        'desc' => 'yaxwi paypo',
+    ),
+    'tovar2' => array(
+      'name' => 'qobilpay',
+        'price' => '2500',
+        'desc' => 'limon hidi keladi',
+    ),
+    'tovar3' => array(
+      'name' => 'fozilpay',
+        'price' => '1500',
+        'desc' => 'dabdala',
+    ),
+    'tovar4' => array(
+      'name' => 'nike',
+        'price' => '10000',
+        'desc' => 'xittoy areginal',
+    ),
+);
+echo "<br></br>";
+
+echo 'mami echo '.$tovar;
+
+echo '<pre>';
+print_r($tovar);
+echo '</pre>';
+
+echo '<pre>';
+var_dump($tovar);
+echo '</pre>';
+
+echo $tovar['tovar1']['name'];
+?>
+print_r kodini echo kodidan farqi  misol uchun tepada 5 ta tovar yozdim arrayda echoga $tovar dip yozse array yozusini ozi chiqip keladi
+print_rga $tovar dip yozse hamma uwa 5 ta tovar chiqip keladi narxi oti komentariyasi bilan
+yana var_dump digan kodam bor unga yam $tovar dip yozse unda var_dumpda mayda chuydalarigacha ciqip keladi arrayi necinci marta 
+iwlatiwimiz necinci strokaligigacha ciqip keladi
+
+phpda komentariya yoziw 
+// bu bir qatorli kamentariya
+/*
+bu komentariya
+kop
+qatorli 
+komentariya
+*/
