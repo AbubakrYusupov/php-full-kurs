@@ -1,0 +1,21 @@
+boolean: true , false
+booleanda 2 ta mantiqiy qiymat bor 1-true, 2-false 
+true rost yani 1 qiymatni beradi
+false yolgon yani 0 qiymatiga teng 0 yoki umuman korinmidi
+
+INTEGER
+$int = '10';
+var_dump($int);
+integer butun son digani kod yozilvotkanida int dip yoziladi
+
+FLOAT
+$fl = 1.2;
+var_dump($fl);
+float kasr son floatda 1.2 5.4 6.7 sonla yoziladi tepadigi qanaqa yoziliwi kodi float qisqacha fl yoziladi
+
+STRING
+$var = 10;
+$str = 'this is my name is \'babki\'. $var';
+
+echo $str2 = "this is my name is \"babki\". $var";
+string kodida harf soz textla yoziladi bowqa xic balo yozbomidi yozsayam textdaka qabul qiladi
