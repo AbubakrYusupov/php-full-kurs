@@ -1,0 +1,42 @@
+bool: true, false kodi bor true 1 ga teng false 0 ga teng
+var_dump((bool) 1); dip yozse jovobi brauzerda true chiqadi agar 1 mas 0 dip yozse false ciqadi
+var_dump((bool) ''); buni ichiga hic nima yozmase brauzerda yana false digan yozu ciqadi agarda lyuboy bitta harf yozse true ciqip keladi
+
+УСЛОВИЯga if,  else,  elseif  kiradi
+
+IF degani agar digani misol uchun:
+$light = 'red';
+if ($light == 'green') {
+	echo "yurlarin";
+} botta $light = 'red'ga teng  ifga etvoman agar if ($light == 'green' ) ga teng bosa echoda yurlarin digan yozu ciqar jovobida hich balo chiqmidi chunki $light == 'green' ga 
+tengmas
+$light = 'red' ga teng
+
+
+ELSE degani yomasam digani else oxirgi variant oxirida bowqa nma ciqsa uwa bopketvuradi misol uchun:
+$light = 'green';
+if ($light == 'red') {
+	echo "yurlarin";
+}else{
+    echo "stop"; 
+}echo "stop"; botta $light ='green' ga teng  lekin ifga $light == 'red' ga teng dip yozilgan agar teng bosa iwlidi yurlarin digan yozu ciqadi brauzerda yomasam elseda 
+stop digan yozu ciqsin divoman hozi elseda stop digan yozu ciqadi cunki light redga tengmas greenga teng bop turipti notori uwanichun else ciqadi
+
+
+ELSEIFda 2-varianti iwlatsa boladi misol uchun ifda greenda yurlarindigan yozu ciqsa agar green bomasa red bosa iwlamidi else iwlidi toxtalarin digan yozu
+ciqadi  agar yellow bosa elseif iwlatse yellowda tayarlanlarin digan yozu ciqarsa boladi 
+$light = 'yellow';
+if ($light == 'green') {
+	if ( 5 > 3 ) {
+		echo '<p>5 > 3</p>';
+	}
+	echo "yurlarin";
+}elseif ($light == 'yellow') {
+	echo 'tayorlanlarin';
+}else{
+	echo "toxtalarin";
+}
+
+
+ЦИКЛ ga while va do-while kiradi 
+while sozi manosi qachonki digani while kodi true yani rostdan false yani yolgon notogri bogungacha iwlidi
