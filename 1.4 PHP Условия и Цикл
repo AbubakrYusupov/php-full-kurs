@@ -39,4 +39,64 @@ if ($light == 'green') {
 
 
 ЦИКЛ ga while va do-while kiradi 
-while sozi manosi qachonki digani while kodi true yani rostdan false yani yolgon notogri bogungacha iwlidi
+while sozi manosi qachonki digani while kodi true dan (yani rost) false bogungacha (yani yolgon notogri)  iwlidi misol uchun:
+$i = 1 ;
+while($i <= 10){
+	echo $i . '<br>';
+	$i++;
+}tepadigi kodda mana $i = 1 ga teng botta man yozvoman qachonki $i <= 10ga teng yoki kichkina bogungacha $i 1 oldiga boradi pasida yozip qoyganman $i++ $iga 1 qowiladi 2 boladi 
+2 babi 10 dan kichkina yana boradi yana 1 qowiladi 3 boladi hullas 10 ga teng bogungacha iwlavuradi.
+Buni teskarisini qisayam boladi  mamnaqa qilip pastidaka
+$i = 10 ;
+while($i <= 1){
+	echo $i . '<br>';
+	$i--;
+	
+	
+
+$i = 1;
+echo '<table border="1">';
+while ($i <= 10) {
+	echo "<tr>";
+	$n = 1;
+	while ($n <= 3) {
+		echo "<td>Row $i | Col - $n</td>";
+		$n++;
+	}
+	echo " </tr>";
+	$i++;
+	
+}
+echo '</table>'; bu while qiyinro varianti sonmas harfli varianti buni jovobida solbik 10 qatorli payda boladi 10 ta row sozi cunki rowga $i ozgaruvchisi berilgan
+$i ozgaruvchisi 10ga teng col 3 ta chunki col soziga $n ozgaruvchisi berilgan $n ozgaruvchisi 3ga teng
+$yil = 1900;
+echo "<select>";
+while ($yil <= 2005) {
+		echo "<option value=$yil>$yil</option>";
+		$yil++;
+}
+echo "</select>";
+
+
+$oy = 1;
+echo "<select>";
+while ($oy <= 12) {
+		echo "<option value=$oy>$oy</option>";
+		$oy++;
+}
+echo "</select>";
+
+$sana = 1;
+echo "<select>";
+while ($sana <= 31) {
+		echo "<option value=$sana>$sana</option>";
+		$sana++;
+}
+echo "</select>"; bunda saytladan registratsiyadan otvotkanda tugilgan yil oy sanani belgilawga kere boladigan kodla qilindi
+
+DO-WHILEda birinichi bolib echo iwlatilinadi kegin while iwlatilinadi  a while ozida birinchi while iwlatilinadi kegin echo iwlatilinadi do-while bilan whileli farqi faqat wunda
+misol uchun:
+$i = 11;
+do{
+	echo $i++ . '<br>';
+}while ($i <= 10);
