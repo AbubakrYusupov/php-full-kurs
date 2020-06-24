@@ -1,0 +1,86 @@
+- ->ayru
++ ->qowu
+* ->kopaytru
+/ -> bolu
+echo -5 + 3 - 4 / 4; 
+echo 5 / 3;
+
+
+-1 ->ayru son
+% ->foiz bunda misol uchun 25 % 4 = 1 chiqadi chunki 25da necta 4 bor 6 ta 25- 24 = 1 ciqadi
+** -> daraja 5 ** 4 = 40 ciqadi 
+echo 33 % 9; 
+echo 2 ** 5;
+echo pow(2, 4);
+
+
+= -> bu barobar digani
+*$a = 5; 
+$b = $a;
+var_dump($a);
+$a = 7;
+var_dump($a);
+var_dump($b);
+
+& -> va degani 
+$a = 5;
+$b = &$a;
+var_dump($a);
+$b = 7;
+var_dump($a);
+var_dump($b);
+
+
+QOWILADIGAN KODLA
+++$a, $a++; bu ikkala kodda ozgaruvchi 1 ga kopayadi
+$a++ ->bu oxirida keladigan 2 ++da ozgaruvchi oxirida 1 ga kopayadi misol uchun:
+$a = 5;
+var_dump($a++);
+var_dump($a); mana bunda var_dumpda $a++ ozgaruvchi bor jovobi 6 chiqiwi kere lekin 5 chiqadi 
+chunki boya etkanimde oxirida 1 qowiladi 2-martta var_dump dip yozdim ozgaruvchini $a var_dumpga yozdim kegin 1 qowilip 6 chiqdi
+++$a -> bu kodda bosa bowidano 1 qowiladi chunki bowida ++ turipti misol uchun:
+$a = 5;
+var_dump(++$a);
+var_dump($a); var_dumpga ++$a yozdim jovobi 6 ciqadi kegin 2-martta var_dumpga $a dip yozdim yana jovobi 6 chiqadi
+
+
+AYRILADIGAN KODLA
+--$a, $a--; bu yam hozirgi tepadigi kodlaga oxwagan faqat botta 1 qowilmidi -- 1 ayriladi bowida oxirida hudda tepadidaka
+
+$a = 5;
+var_dump($a--);
+var_dump($a); mana hudda tepadidaka 1-var_dumpda yozganimda $a-- bir ayrilmidi 2-martta yozganimda 1 ayriladi
+
+$a = 5;
+var_dump(--$a);
+var_dump($a); mana bunda 1-var_dumpda yozganimizdayam --$a 2-martta var_dumpda yozganimizdayam  1 son ayriladi
+
+
+. -> bu kod tochka bunda ozgaruvchilani bir birgia klelap qoysa boladi sozlaniyam hudda sonlani bir birga qowgande
+misol uchun:
+$str1 = "hello,";
+$str2 = " world";
+$str = $str1 . $str2;
+echo $str; mana botda 1-strni 2-strga klelap qoydim endi jovobi hello, world ciqadi 
+$games = "bol , 2 raketka";
+$humoyuddin = "I have 2 game: $games" . 's';
+echo $humoyuddin; ha aytkancha ozgaruvchi " kavichka ichida iwlidi" ; ' bittali kavichkada iwlamidi soz bop qoladi'
+
+
+KOMBINIROVANIY OPERATR bu ubu soni yokida sozi yozvotkanimizada qisaqa qip yoziwga kere boladi
+misol uchun:
+$a = 30;
+$a = $a + 20;
+$a /= 4;
+$a *= 4;
+echo $a; mana 2-qatorda $a = $a + 20 dip yozilgan  kombinirovaniy operatrda qisqa qip $a += 20; dip yozsa boladi jovobi bir hil ciqadi
+kombinirovaniy operatrda + - * / lani iwlatsa boladi 
+
+kegin . niyam iwlatsa boladi misol uchun ;
+$str1 = "hello,";
+echo $str1 .= " world";  mana $str = $str . "world" dip yozip otirmasdan $str .= "world" dip yozsa boladi
+
+NULL kodi bom-bow digani ichida hich balo bomidi
+$var = NULL;
+++$var;
+var_dump($var);
