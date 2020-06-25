@@ -101,9 +101,21 @@ do{
 	echo $i++ . '<br>';
 }while ($i <= 10);
 
-WHILEda 2 karasini yozdim
-$el_2= 2;// $el_2 botta 2ga teng
-$i  = 2;// $i botta 2ga teng
-while ($i <= 9) { // mana botta while ichidagi $i <= 9 dan kichkina yoki teng
-	echo $el_2 . '*' . $i . '=' . $jovob = $el_2 * $i.'<br>';/* botta $el_2 qowilvoti * kegin qowilvoti $i kegin = qowilvoti kegin jovobi chiqvoti $el_2 * $i = 4 bovotti chunki $el_2 yam $i yam 2 ga teng */
-	$i++;// bunda $i ga  1 qowilip ketvoti 9ga teng bogunigacha qowilip ketvuradi chunki $i++ qip qoyganman $i++ qip qoysa 1 qowilip ketvuradi 
+WHILEda  karajadval yasadim
+$x = 1;// $x ozgaruvchisi botta 1ga teng
+echo '<table border="1">';// bu table tegi tablitsa qivotkanda kere boladigan teg tablitsa bop ramkada chiqadi
+while ($x <= 10) {// hozi bu whileda $x ozgaruvchisini  10ga teng yoki 10dan kichkina  dip belgilap qoyganman
+	echo "\t<tr>\n";// <tr> tegi jadvallar qatorini yaratish uchun idish sifatida xizmat qiladi. Bunday qator ichidagi har bir katakni <td> tegidan foydalanib
+	belgilash mumkin.
+	$y = 1;// $y ozgaruvchisi botta 1ga teng
+	while ($y <= 10) {// hozi bu whileda $y ozgaruvchisini  10ga teng yoki 10dan kichkina  dip belgilap qoyganman
+		echo "\t\t<td>$y * $x = " . $y * $x ."</td>\n";// qator ichidagi har bir katakni <td> tegidan foydalanib belgilanadi. 
+		Shuning uchun $y ozgarvchisi bilan $x ozgaruvchisini td tegi ichiga kopaytirip yozip qoyganman agar bunaqa qimasam brauzerda qaravotkanimda faqat jovobini ozi 
+		chiqib keladi agar td ichiga yozsam masalasi chiqib keladi $y * $x bolib. Kegin .da birbiriga ulab td tegidan chiqib boya etkanimde tawqarida $y*$x yozib 
+		jovobini chiqardim
+		$y++;// botta $y ozgaruvchisi tepadigi while digi 10 soniga teng bogungacha 1 son qowilib borvuradi ++ da 1 soni qowilvuradi qaconki $y 10 bogungacha
+	}
+	echo "\t</tr>\n";// bu tr tegini yopiliwi tepadigi ochiliwi edi
+	$x++;// botta $x ozgaruvchisi tepadigi while digi 10 soniga teng bogungacha 1 son qowilib borvuradi ++ da 1 soni qowilvuradi qaconki $x 10 bogungacha
+}
+echo '</table>';// bu table tegini yopiliwi tepadigi ochiliwi edi
