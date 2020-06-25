@@ -1,0 +1,42 @@
+MASSIV kod yozilvotkanda array dip yoziladi massiv array digani
+massiv nimadigani masssiv misol uchun ozgaruvchida 1 ta element berip qoysa boladi boldi bowqa element ber bomidi a massivda kop elementla bersa boladi  holagancha   
+
+$arr =  array('сережа', 'макcим', 'харлаш');// $arr = array botta ozgaruvchi massivga teng array degani massiv degani 
+//var_dump($arr);
+echo "<pre>";// pre tegida nma yozgan bose uwani togirlap beradi spiska boyicha misol uchun 3 ta ism yozdim uwa 3 ta ism bitta qatorda turipti preni yozsam 3 ta ism aloxida 
+turadi 3 ta qator bolib
+print_r( $arr);
+echo "</pre>";// bu pre tegini yopiliwi tepadigi ochiliwidi
+echo $arr[2];// $arr ozgaruvchisiga arraydip yozganman arrayda 3 ism bor hozi botta $aar[0] qisam arraydi birinchi ism chiqarber divoman massivda 1 danmas 0 dan bowlanadi 
+uwanichun 1-ismni chiqarber dip 0 dip yozib qoyganman
+
+3 ta kod orqali brauzerga qigan iwmizi ciqarse boladi bular: echo ; print_r; var_dump mawi 3 lovi hozi bulani farqini chuntir beraman
+echo da $arr dip yozse faqar ozgaruvchi $arr nimaga tengligini chiqarberadi misol uchun hozi ozgaruvchi $arr = arrayga tenng faqat arrayi chiqar beradi  echo faqar chunaqa
+print_r da $arr dip yozse array yam array ichidigi ismlaniyam ismlani etkanimde soniniyam ciqar beradi  0  1  2 va bowqalar misol uchunde
+var_dump bosa $arr dip yozse $arr teng bogan arrayiyam array ichidigi ismiyam ismda nechta harf bosa uwa nechta harfliginiyam chiqar beradi
+
+ 
+ MASSIVDA 3 XIL TOVAR YASADIM
+$googds = [// massivda yana massiv ichiga massiv ochsa boladi
+	[
+		'title' => "samsung", //TITLEGA TOVARRI OTI YOZILADI
+		'price' => 100,
+		'description' => "hadavoy ketadigan kopchli oladigan telefon",
+	],
+	[
+		'title' => "lenovo",
+		'price' => 220,// PRISEGA TOVARRI NARX YOZILADI
+		'description' => "funksiyalari ortacha",
+	],
+	[
+		'title' => "konditsioner",
+		'price' => 1000,
+		'description' => " zor mizlatadigan konditioner",//DESCRIPTIONGA TOVARRI KOMENTARIYASI YOZILADI
+	]
+]; // botta 4 ta tovar ochdim massiv ichida botta oti narxi komentariyasini yozdim
+echo "<pre>";// preda boyidaka togirlavomiz turadigan joyini qator qator qilib
+print_r($googds); //print_rda brauzerda jovobini korvomiz
+echo "</pre>";// preni yopiliwi tepada ochiliwi
+echo $googds[0]['title'] .' - '. $googds[0]['price'];// botta oti bilan narxini chiqarvomiza echo orqali
+echo "<br>";// br tegida bitta qator tawavomiza	
+echo $googds[1]['title'] .' - '.  $googds[1]['price'];
