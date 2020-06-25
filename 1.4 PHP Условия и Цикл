@@ -44,8 +44,8 @@ $i = 1 ;
 while($i <= 10){
 	echo $i . '<br>';
 	$i++;
-}tepadigi kodda mana $i = 1 ga teng botta man yozvoman qachonki $i <= 10ga teng yoki kichkina bogungacha $i 1 oldiga boradi pasida yozip qoyganman $i++ $iga 1 qowiladi 2 boladi 
-2 babi 10 dan kichkina yana boradi yana 1 qowiladi 3 boladi hullas 10 ga teng bogungacha iwlavuradi.
+}tepadigi kodda mana $i = 1 ga teng botta man yozvoman qachonki $i <= 10ga teng yoki kichkina bogungacha $i 1 oldiga boradi pasida yozip qoyganman $i++ $iga 1 qowiladi 
+2 boladi 2 babi 10 dan kichkina yana boradi yana 1 qowiladi 3 boladi hullas 10 ga teng bogungacha iwlavuradi.
 Buni teskarisini qisayam boladi  mamnaqa qilip pastidaka
 $i = 10 ;
 while($i <= 1){
