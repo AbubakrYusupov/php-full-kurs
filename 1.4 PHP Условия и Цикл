@@ -94,9 +94,16 @@ while ($sana <= 31) {
 }
 echo "</select>"; bunda saytladan registratsiyadan otvotkanda tugilgan yil oy sanani belgilawga kere boladigan kodla qilindi
 
-DO-WHILEda birinichi bolib echo iwlatilinadi kegin while iwlatilinadi  a while ozida birinchi while iwlatilinadi kegin echo iwlatilinadi do-while bilan whileli farqi faqat wunda
-misol uchun:
+DO-WHILEda birinichi bolib echo iwlatilinadi kegin while iwlatilinadi  a while ozida birinchi while iwlatilinadi kegin echo iwlatilinadi do-while bilan whileli farqi faqat 
+wunda misol uchun:
 $i = 11;
 do{
 	echo $i++ . '<br>';
 }while ($i <= 10);
+
+WHILEda 2 karasini yozdim
+$el_2= 2;// $el_2 botta 2ga teng
+$i  = 2;// $i botta 2ga teng
+while ($i <= 9) { // mana botta while ichidagi $i <= 9 dan kichkina yoki teng
+	echo $el_2 . '*' . $i . '=' . $jovob = $el_2 * $i.'<br>';/* botta $el_2 qowilvoti * kegin qowilvoti $i kegin = qowilvoti kegin jovobi chiqvoti $el_2 * $i = 4 bovotti chunki $el_2 yam $i yam 2 ga teng */
+	$i++;// bunda $i ga  1 qowilip ketvoti 9ga teng bogunigacha qowilip ketvuradi chunki $i++ qip qoyganman $i++ qip qoysa 1 qowilip ketvuradi 
