@@ -1,0 +1,119 @@
+ФУНКЦИИ
+1 Count funksiyasi hisoberish vazifasini otidi
+echo count($goods); count funksiyasi hisoblidi misol uchun  $goods ozgaruvchisida kecta massiv bor dip belgilandi brauzerda 2 ta dip chiqti chunki rostanam 2 boridi.
+Kegin count ichiga 1 dip yozsa echo count($goods, 1); endi necta massiv borliginimas nechi qatorligini hisoblidi uwa 2 ta massivda necta qator bor misol uchun 8 ta 8 soni chiqadi. 
+
+2 Array_diff funksiyasi 2-ozgaruvchida yo lekin 1-ozgaruvchida bor bogan sozmi sonmi nma bosayam 1-ozgaruvchida bor 2-ozgaruvchida yo narsa ni korsat beradi misol uchun:
+$array1 = array("a" => "green", "red", "blue" , "red"); //botta $array1da blue rangi bor wu rang $array2da yo wuni brauzerda blue rangini korsat beradi
+$array2 = array("b" => "green", "yellow", "red");// mana botta blue rangi yo hullas array_diff funksiyasi 1 ozg da bor 2 ozg da yo narsani korsat beradi
+$result = array_diff($array1, $array2);
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+ 
+3 Array_intersect funksiyasi bosa Array_diff funksiyasini teskarisi misol uchun Array_diffda 2-ozgaruvchida yo narsani korsatsa Array_intersectda 2-ozgaruvchida hamma bor
+narsani korsatadi 1-ozgaruvchidayam bir hil hammasi bosa hammasini korsatadi 
+$array1 = array("a" => "green", "red", "blue" , "red"); // 2-ozgaruvchi bilan 1-ozgaruvchida bor hamma rangni korsatadi misol uchun 1-ozgaruvchida green red  red bor wulani 
+korsatadi  chunki bu rangla 2-ozgaruvchidayam bor  
+$array2 = array("b" => "green", "yellow", "red");// yellowni korsatmidi chunki 1-ozgaruvchida yo  bogani uchun  
+$result = array_intersect($array1, $array2);
+
+4 Array_key_exists funksiyasi massivda belgilangan kalit bormi yomi tekishiradi misol uchun:
+$search_array = array('first' => 1, 'second' => 4);// botta ozgaruvchi massivga teng massivda first sozi 1ga second sozi 4ga teng
+if (array_key_exists('second', $search_array)) {// botta etvomiza agar ozgaruvchida second sozi bosa ok yozusini chiqar  yomasam NO yozusini chiqar divomiz rostanam second sozi
+bor ok chiqvoti 
+    echo "OK";
+}else{
+	echo "NO";
+}
+
+5 Array_keys funksiyasida massivdagi hamma kalitlarni oladi kalit diganda misol uchun $arr massivida 3 ism yozganmiz pasdagidaka qip yozsa array_keysni baruzerda $arr 
+massivdagi ismlarni soni chiqib keladi 0 1 2 bolib
+$result = array_keys($arr); // botta array_keys funksiyasini iwlatiliwi
+echo "<pre>";// pre tegida har bita son 1 qator bovoti
+print_r($result); //print_r orqali brauzerda jovobi ciqib kelyapti
+echo "</pre>";// pre tegini yopiliwi tepadi ochiliwi
+
+6 Array_values funksiyasi barcha massivdagi qiymatni oladi  Array_keys bowidigi sovolinimi soninimi sozini olsa   Array_values oxirdigi qiymatini oladi misol uchun:
+$result = array_values($arr);// array_valuesda $arr ozgaruvchisidagi ismlarni ovoti
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+7 Array_merge funksiyasi 2 massivni birlashtiradi mana misol uchun  Array_valuesda massivni qiymatini chiqarsa misol uchun ismini chiqarsa ismini orqasida soni boladi 0 mi 1 mi
+a  Array_mergeda bosa son ciqadigan joydayam massiv boladi qiymati chiqadigan joydamam massiv boladi misol uchun:
+$array1 = array("color" => "red", 2, 4);//$array1 ozgaruvchisida  massiv color redga teng yoki kotta 
+$array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);// $array2 ozgaruvchisida 1-si color => green; 2-si shape => trapezoidga teng; 
+$result = array_merge($array1, $array2);// array_merge funksiyasida mawi 4 tala soz chiqadi jovobida array_merge funksiyasi wunga kere. Kegin yana 1ta narsa agar 
+($array1 + $array2) bosa color greenmas 1-ozgaruvchidi red rangi chiqadi
+
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+8 Array_rand funkiyasi massivdan bitta yoki bir nechta tasodifiy kalitlarni tanlaydi misol uchun $arr ozgaruvchisida 3 ism bor $result = array_rand($arr); dip yozse brauzerda
+ozgarvuradi tasodifiy 2  1  0  0  2  1 bolib ozgarvuradi tasodifiy
+$result = array_rand($arr); 
+print_r($result);
+
+
+9 Array_reverse funksiyasi massivni teskari aylantirvoradi $arr ozgaruvchisida ivanov sawa deniyel bosa  Array_reverse funksiyasida deniyel sawa ivanov bop qoladi. Sonlariyam
+ozgarip qoladi sonlarini oldindidaka qilish uchun array_reverse ichiga true dip yoziw kere
+$result = array_reverse($arr); 
+print_r($result);
+
+10 COMPACT-o'zgaruvchilar nomlarini va ularning qiymatlarini o'z ichiga olgan massiv yaratadi yani ozgaruvchinyam qiymatiniyam massivga aylantiradi misol uchun:
+
+$city  = "San Francisco";// city ozgaruvchisi San Francisco soziga teng
+$state = "CA";// state ozgaruvchisi CA soziga teng
+$event = "SIGGRAPH";// event ozgaruvchisi SIGGRAPH soziga teng
+
+$result = compact('city', 'state', 'event'); // botta compact funksiyasini ichiga ozgaruvchilarni otini yozse brauzerda otiyam qiymatiyam 
+(qiymati diganda yani boyigi ozgaruvchiga teng bogan sozlayam chiqib keladi) massivga aylanadi ozgaruvchiyam ozgaruvchini qiymatiyam
+
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+
+11 EXTRACT funksiyasi compact funksiyasini teskarisi misol uchun compact funksiyasi ozgaruvchini va uni qiymatini massivga aylantirsa EXTRACT. Massivni ozgaruvchiga aylantiradi
+misol uchun:
+$result = [// mana botta massiv yaratvomiz ichida 3 ta waxar bor
+
+	'city' => 'SF',
+	'state' => 'CO',
+	'event' => 'DO',
+];
+
+extract($result);// extract funkisyasi orqali hozir bu massivlarni ozgaruvchiga aylantiramiz
+echo $state;// massivni ozgaruvchiga aylantirganimizni korstiwda echo yordam beradi
+
+12 ASORT- funksiyasi massivni qiymatini alfavit boyicha tortibga solib chiqarberadi brauzerda misol uchun:
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");// botti massivi qiymati chalkash chulkash bob yotibti  
+asort($fruits);// assort funksiyasi orqali mawi chalkaw bob yotkan qiymatlani alfavit boyicha chiqar beradi misol uchun botta lemon orange banana apple turipti
+asort funksiyasida alfavit boyicha apple banana lemon orange qilib ketma-ket qiberadi
+print_r($fruits);// buni jovobini brauzerda koriwda print_r kodi yordam beradi
+
+
+13 SORT-funksiyasi asort funksiyasidan farqi asortda faqat massivni qiymatini alfavit boyicha tartiblasa. Sort funkisyasida butun bowli massivni tartiblidi misol uchun: 
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");// botti massivi qiymati chalkash chulkash bob yotibti  
+sort($fruits);// sort funksiyasi orqali mawi chalkaw bob yotkan qiymatlaniyam alfavit boyicha chiqar beradi kegin qiymat orqsida turgan 
+sonlaniyam togirlab ketma-ket qiberadi misol uchun 
+print_r($fruits);// buni jovobini brauzerda koriwda print_r kodi yordam beradi
+Array
+(
+    [0] => apple
+    [1] => banana
+    [2] => lemon
+    [3] => orange
+)
+
+14 KRSORT- funksiyasi massivni orqaga qaytarip qoyadi oldin qanaqa bogan bosa uwnaqa qip qoyadi
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+krsort($fruits);
+print_r($fruits);
+
+15 KSORT- funksiyasi kalitni taribga soladi yani qiymatni orqasidagi kalitni 
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+ksort($fruits);
+print_r($fruits);
