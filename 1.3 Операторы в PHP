@@ -22,7 +22,9 @@ $a = 7;
 var_dump($a);
 var_dump($b);
 
-& -> va degani 
+& -> va degani
+&& -> buyam va degani kegin; and -> buyam va degani
+|| -> bu yoki digani kegin; or -> buyam yoki digani
 $a = 5;
 $b = &$a;
 var_dump($a);
@@ -84,3 +86,21 @@ NULL kodi bom-bow digani ichida hich balo bomidi
 $var = NULL;
 ++$var;
 var_dump($var);
+
+&& -> bu va degani buni and dip yozsayam boladi misol uchun:
+$a = 5;
+if ($a > 3 && $a > 6) {// botta ozgaruvchi 5 ga teng ifda ozgaruvchi 3 dan kotta dip kegin && yozip ozgaruvchi 6danam kotta dip wart berdim
+	echo "teng";//agarda wu yozganim tori bosa teng sozini chiqar didim 
+}else{
+	echo "tengmas";// yomasam tengmas sozini chiqar didim tengamas sozini chiqardi chunki 6 ozgaruvchidan kishkinamas
+}
+
+|| -> bu digani yoki digani buni or dip yozsayam boladi misol uchun:
+$a = 5;
+if ($a > 3 or $a > 20) {// botaa ozgaruvchi 5ga teng ifda wart bervoman ozgaruvchi 3 dan kotta or (yoki) ozgaruvchi 20 dan kotta 
+	echo "teng";// agar tori bosa teng yozusini chiqar divoman botta hozi jovobi teng chiqdi chunki 3 rostanam ozgaruvchidan kichkina or operatirini qoyse ifda bitta bosayam 
+  tori jovob bosa teng sozini chiqaradi agar && operatirini qoyse bitta bosayam notori jovob bosa tengmas sozini chiqaradi 
+}else{
+	echo "tengmas";// yomasam tengmas sozini chiqar divoman
+}
+
