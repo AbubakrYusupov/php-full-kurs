@@ -1,0 +1,31 @@
+SWITH operatori if bilan elsega oxwagan operatr switch ichidigi case kodi if vazifasini default esa else vazifasini otidi misol uchun:
+switch ($var) {// botga switch ichiga ozgaruvchi kiritiladi
+	case 1:// case kodi if vazifasini otidi
+		echo "varebile 1";// botta brauzerda jovobi chiqadi
+		break;// break kodi har doim yoziliwi kere agarda break kodi yozilmasa togri jovobdan kegin qancha yana variantla bosa uwalaniyam ciqariptawidi misol uchun
+    case kodidan 3 ta yozdi case kodini 2-sida togri jovob bor agar break yozmase 3-caseam defaultam brauzerda chiqib keladi
+	default:// default kodi else vazifasini otidi
+		echo "varebile yo umunan";// botta brauzerda jovobi chiqadi
+		
+}
+
+Альтернативный синтаксис 
+foreach ($names as $name => $surname): 
+	echo "Name: $name, Surname: $surname <br>";
+endforeach;
+
+?>
+<?php if ($bool): ?>
+		<table class="table" border="1">
+			<tr>
+				<td><?php echo $str1 ?></td>
+				<td><?php echo $str2 ?></td>
+				<td><?php echo $str3 ?></td>
+			</tr>
+		</table>
+
+<?php endif;  ?>
+
+<?php foreach ($names as $name => $surname): ?>
+	Name: <?php echo $name ?>, Surname: <?php echo $surname ?> <br>
+<?php endforeach ?>
