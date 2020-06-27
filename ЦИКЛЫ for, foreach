@@ -34,6 +34,7 @@ foreach ($arr as $item) {// botta item qiymat vazifasini otidi
 	print_r($item . '<br>') ;//print_r brauzerda mawi yozgan kodimizani jovobini chiqariwda yordam bewradi
 }
 
+
 foreach ($names as $Name => $Surname) {// botta hozi foreach ichida Name kalit vazifasini otidi. Surname esa qiymat vazifasini otidi 
 	echo "Name: $Name, Surname: $Surname <br>"  ;// echo bizaga brauzerda jovobini chiqariwimizda yordam beradi 
 }
@@ -47,3 +48,23 @@ davidov
 Name: Ivan, Surname: Ivanov
 Name: Petr, Surname: Petrov
 Name: Sidor, Surname: Idorov
+
+
+BREAK - kodi faqat sikla bilan iwlidi internet magazin yasaganda kere boladigan kod misol uchun internet magazin 10000 ta tovar bor uwandan 100 tovarri topiw kere bosa 
+100 tovargacha bogan hamma tovari korsatadide 100dan kegingisini korsatmidi wunga kere boladi misol uchun:
+for ($i == 0; $i <= 30; $i++) { // mana botta 30 ta tovar bor misol uchun 
+	echo $i . '<br>';
+	if ($i == 25){//25-tovarri chiqarber divoman 
+		echo '<h1>topildi</h1>'; // brauzerda topildi dip chiqarberadi 
+		break;// break bosa 30 ta tovar bosa 25- tovar kere bosa 25ta uyogini chiqarmidi 25ta boldi topildi dip chiqadi uyogiga chqmidi wunga break kere
+	} 
+	
+}
+
+
+CONTINUE- kodi ubu bitta misol uchun internet magazinda ubu tavari belgilagan bose ifda uwani optawidi misol uchun:
+for ($i == 0; $i <= 30; $i++) {  // botta 30 tovar bor
+	if ($i == 25 || $i ==10 || $i == 9 || $i == 30) continue;// mana ifda 25 || 10|| 9|| 30 tovarlani belgiladim wulani continue kodi yordamida optawidi ||(yoki)
+	iwlatsa wunaqa agar &&(va) ni iwlatse $i >= 10 && $i <= 20; 10dan 20gacha bogan tovarlani optawidi
+	echo $i . '<br>';// br kodida bitta qator tawaladi
+}
