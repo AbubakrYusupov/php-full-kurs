@@ -1,0 +1,49 @@
+FOR sikli tezro yoziwga yordam beradi for ($i=0; $i < 10); $i++) for siklini ichiga 3ta narsa yozsa boladi. 1) $i=0 ozgaruvchi nimaga tengligini. 2)$i <= 10 ozgaruvchiga buyru 
+beriwi. 3) $i++ ozgaruvchiga 1 soni qowib borvuriliwi misol uchun:
+
+$arr = array('jovo', 'kama', 'aki', 'tretiy', 'gutrjogotg');
+
+$arr[] = 'demis';
+$arr[] = 'jony';
+
+for ($i=0; $i < count($arr); $i++) { 
+	echo $arr[$i] . "<br>";
+}
+
+
+FOREACH sikli bowqa siklarga oxwamagan sikl foreach sikli faqat massiv, ozgaruvchi, obektlar bilan iwlidi bowqa siklarga oxwap son yozilmidi 1dan 10 gacha yobomasam $i <= 10
+dip yozilmidi.
+foreach sikli 2 hil boladi ular quydagicha:
+1) foreach ($names as $value) manabu 1-turi as value dip yoziladi value sozini tarjimasi qiymati digani bu foreach massivni qiymatini korsat beradi
+2) foreach ($names as $key => $value) bunisi esa 2-turi botta value ga key yam qowilgan key sozini tarjimasi kalit digani foreachi 2-turida massivni ham qiymatini ham 
+kalitini korsatadi brauzerda.
+misol uchun:
+BULLA YOZGAN KODLARIM
+$arr = ['ivanov', 'petrov', 'sidorov'];
+  
+$arr[5] =  'demisov';
+$arr[] =  'davidov';
+
+$names = [
+	'Ivan' => 'Ivanov',
+	'Petr' => 'Petrov',
+	'Sidor' => 'Idorov',
+];
+
+foreach ($arr as $item) {// botta item qiymat vazifasini otidi 
+	print_r($item . '<br>') ;//print_r brauzerda mawi yozgan kodimizani jovobini chiqariwda yordam bewradi
+}
+
+foreach ($names as $Name => $Surname) {// botta hozi foreach ichida Name kalit vazifasini otidi. Surname esa qiymat vazifasini otidi 
+	echo "Name: $Name, Surname: $Surname <br>"  ;// echo bizaga brauzerda jovobini chiqariwimizda yordam beradi 
+}
+ 
+ BU BOSA BRAUZERDA CHIQGAN JOVOBI  
+ivanov
+petrov
+sidorov
+demisov
+davidov
+Name: Ivan, Surname: Ivanov
+Name: Petr, Surname: Petrov
+Name: Sidor, Surname: Idorov
