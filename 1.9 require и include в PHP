@@ -1,0 +1,11 @@
+include va require orqali fayllani bir biriga ulasa boladi faqat  require bilan includeni bitta farqi. Includeda agarda ulagan faylimiz bomasa unaqa fayl ochmagan bose php kod
+iwlavuradi.
+Agar requireda ulagan faylimiz bomasa unaqa fayl ochmagan bose requireni tegidigi php kod iwlamidi farqi faqat wunda.
+misol uchun:
+<?php include 'inc/inc.php' ?>
+<?php require 'inc/inc.php' ?>
+Yana include_once va require_once yam bor bulada oddiy require bilan includedan farqi require bilan includeda holagancha bitta faylni ulasa boladi. 
+A include_once va require_once birmatta iwlatsa boladi bowqa umuman iwlat bomidi faqat birmartta faylni ulasa boladi.
+kodlari:
+<?php include_once 'inc/inc.php' ?>
+<?php require_once 'inc/inc.php' ?>
