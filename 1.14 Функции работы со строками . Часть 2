@@ -1,0 +1,58 @@
+Str_replace funkiyasi orqali str_replace ichiga biron bitta teg yozib sozlani yozigini 
+ozgratirsa boladi qalin yoki ingichka qilib yozulani ozgartirsa boladi. 
+kodlari:
+$str = '[I]Привет[/I]! Меня зовут [B]Вася[/B]';//mana botta b tegida vasya sozini qalinlawtirvomiz i tegi orqali privet 
+sozini italik qivomiz
+//$str = str_replace('[b]', '<b>', $str);// kegin mana mamnaqa yoziladi str_replace ichiga birinchi qidirilvotkan narsa
+yoziladi ikkinchi qidirlvotkan darsani <buni ichiga yoziladi> tepada korsatilgan kegin uchhinchi bolib ozgaruvchi yoziladi
+//$str = str_replace('[/b]', '</b>', $str);	
+
+
+Str_ireplace funkiyasiyam bor str_ireplaceni str_replacedan farqi str_replaceda yozgan sozimizdi b tegi bilan str_replace
+ichidigi yozgan b tegimiz bir xil boliwi kere yani bittasida kotta harfda B bitta sida kichkina harfda b yozsa iwlamidi
+a str_ireplaceda farqi yo iwlavuradi
+
+
+$str = '[I]Привет[/I]! Меня зовут [B]Вася[/B]';//mana botta b tegida vasya sozini qalinlawtirvomiz i tegi orqali privet
+sozini italik qivomiz
+//$str = str_replace('[b]', '<b>', $str);// kegin mana mamnaqa yoziladi str_replace
+//$str = str_replace('[/b]', '</b>', $str);
+$search = ['[B]', '[/b]', '[i]', '[/i]'];
+$replace = ['<b>', '</B>', '<i>', '</i>'];
+//$str = str_replace($search, $replace, $str);
+$str = str_ireplace($search, $replace, $str);// str_ireplace bilan str_replaceni farqi str_ireplacega yozvotkan B yoki I 
+kodini kottada yozse kegin manbi tepadi serachlaga kichkinada yozseyam iwlavuradi a str_replaceda koddiniyam yozvotkan  
+tekstmizdi i bilan bni bir hil yoziwimmiz kere bomasa iwlamidi
+
+
+Strip_tags funksiyasi yozgan qatorimizdi html va php kodni ochirib tawidi b bilan i tegini yozganmiz agar strip_tags
+funksiyasini yozse teglani ochirib tawidi:
+
+$str = '[i]Привет[/i]! Меня зовут [b]Вася[/b] <script>alert("togri")</script>';//botta qatordagi sozlarda biriga i tegi bilan b tegini bervomiz 
+$search = ['[i]', '[/i]', '[b]', '[/b]'];// botta i tegi bilan b tegini iwlatvomiz
+$replace = ['<i>', '</i>', '<b>', '</b>'];// botta i tegi bilan b tegini iwlatvomiz
+$str = str_replace($search, $replace, $str);
+echo strip_tags($str, '<b>');// strip_tags funksiyasi qatordigi html teglani ochirib tawidi. lekin holase ozimizaga 
+kereligini belgilavolib faqat uwani iwlatadigan qise boladi misol uchun 
+man botta b tegi iwlasin dip belgilavoldim strip_tags ichida qanaqa iwlawi korsatilgan 
+
+
+Strlen funksiyasida qatordigi baytni hisoblidi hello sozida 5 bayt bor yani 5 ta harf lekin bayt digani harf diganimas
+agar hozi hello sozini yonidan bitta joy tawasam brauzerda 5 mas 6 korsatadi hullas  har bitta joy bitta bayt hisoblanadi
+uwa baytlani hisoblidi
+kodlari:
+$str = 'hello';
+echo strlen($str);// strlen funksiyasi qatordigi baytni hisoblidi hello sozida 5 bayt bor yani 5 ta harf lekin bayt digani
+harf diganimas agar hozi hello sozini yonidan bitta joy tawasam brauzerda 5 mas 6 korsatadi hullas  har bitta joy bitta
+bayt hisoblanadi uwa baytlani hisoblidi lekin lotinchada wunaqa agar kirilcha yozse strlenda har bitta harf uchun bitta
+bayt mas 2 ta bayt oladi unaqa bomasligi uchun mb_strlenni iwlatiw kere
+
+
+Mb_strlen funksiyasida kirilcha soz yozse har bitta harfga bitta bayt oladi strlendaka 2 tamas strlen
+lotincha yozse iwlatamiz kirilcha yozse mb_strlen iwlatamiz. mb_strlen kop baytli bilan iwlidi strlen bitta baytli
+bilan iwlidi.
+kodlari:
+
+$str2 = 'привет';
+echo mb_strlen($str2);// mb_strlen funksiyasida kirilcha soz yozse har bitta harfga bitta bayt oladi strlendaka 2 tamas
+ strlen lotincha yozse iwlatamiz kirilcha yozse mb_strlen iwlatamiz
