@@ -1,0 +1,22 @@
+404 kodida hich nima topilmidi 
+kodlari: header('HTTP/1.0 404 Not Found');// 404 kodida hich nima topilmidi
+
+
+304 kodi hich nima ozgarmidi digani
+kodlari:
+header('HTTP/1.0 304 Not Modified');// 304 kodi nima 304 kodi ozi asosi hich nima ozgarmidi digani  mana misol uchun
+html kodga soz yozganmiz привет люди dip kegin 304 kodini yozse kegin uwa html kodidi sozga qowimcha ubu narsa yozse
+brauzerda natijasida hich nima ozgarmidi qowimcha yozgan narsamiz qowilmidi 304 kodini optawase kegin qowiladi
+
+
+pasdigi kodda htmldigi hamma kodla brauzerda chiqadi
+header('Content-Type: text/plain; charset=utf-8');// botta plain dip yozdi plain dip yozsa mawi fayldi yozgan html
+kodimizi hammasi brauzerda chiqadi
+
+
+pasdigi kod brauzerdi narsani skachat qiladi
+header('Content-Disposition: attachment; filename="downloaded.txt"');// bu koddi yozse brauzerda chiqgan narsani
+skachat qivoladi kompyuterga
+
+
+readfile('text.txt');// readfile faylni o'qidi
