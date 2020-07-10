@@ -1,0 +1,38 @@
+DATE() funksiyasida vaqtni korsatadi 
+
+echo date('y-m-d H:i:s');// botta biza vaqtni belgilavomiza hozi hammasni chuntir beraman 1-digi y(bu digani yil digani)
+y ni kichkina harfda yozsa 2 ta sonni korsatadi misol uchun hozi 2020 yil 2020 korsatmidide 20 korsatadi agar Y ni kottada
+yozse unda 4 ta sonni hammasini korsatadi, 2-digi m(bu digani oy digani) m ni kichkina harfda yozse oyni sonda korsatadi 
+agar kotta harfda M dip yozse unda harfda korsatadi oyni misol uchun hozi iyul oyi iyul korsatadi, 
+d(d digani bu kun digani ) , h(h digani soat digani), i(i digani minut digani), s(s digani sekund digani) 
+mana wunda yilli oyni kunni soatni minutni sekundni korsatadi 
+
+
+Date_default_timezone_get funksiyasi waxarni belgilidi faqat biza yawavotkan waxarnimas ozi avtomaticheskiy Europe/Moscow 
+ni belgilidi
+echo date_default_timezone_get();//date_default_timezone_get funksiyasi serverdi kompyuter ozi belgilagan waxarni 
+brauzerda chiqarberadi Europe/Moscow mawi waxarni server belgilagan agar ozimiza yawidigan waxarni belgilamoqchi bose 
+date_default_timezone_set funkiyasiga yoziwimiz kere
+
+
+Date_default_timezone_set funksiyasida yawavotkan waxarimizani belgilimiza  
+
+echo date_default_timezone_set('Asia/Tashkent');//date_default_timezone_set funksiyasida yawavotkan waxarimizani belgilimiz
+a  misol uchun man Asia/Tashkent yawidigan waxarimmi belgiladim buni jovobi chiqishi uchun brauzerda  mawi funksiyamizani 
+tegidan date_default_timezone_get yoziwimiz kere
+echo date_default_timezone_get();
+
+phpinfo();phpinfoda phpni nastroykasini korsa boladi hammasini brauzerda
+
+
+Getdate funksiyasi date funsiyasini mukkamalawgani
+$date = getdate();// getdate funksiyasi date funsiyasini mukkamalawgani getdate funksiyasi haftani qaysikuni liginiyam 
+yilni nechnchi kuniliginiyam etadi hullas kopro malumot osa boladi
+print_r($date);
+echo $date['year'];
+
+
+Strtotime funksiyasida vaqtni qowib ayirsa boladi
+echo date('y-m-d H:i:s', strtotime("-5 day, -1 hour"));//strtotime funksiyasida vaqtni qowib ayirsa boladi misol uchun 
+saot date funksiyasida 10 bosa strtotime funksiyasi ichiga +1 hour qilib bir soat qowsa yokida ayirsa boladi wunda 
+brauzerda 10 mas 11 chiqib keladi 
