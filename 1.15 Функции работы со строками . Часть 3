@@ -1,0 +1,53 @@
+MB_STRPOS funksiyasi biron bitta sozdigi bitta harfni mb_strpos ichiga yozse brauzerda uwa harfni kaliti yani soni chiqib 
+keladi misol uchun botta П dip yozdi brauzerda 0 chiqib keldi chunki 0 dan bowlanadi qator 1 dan mas.
+kodlari:
+
+$str = 'Привет мир';
+echo mb_strpos($str, 'П');//mb_strpos funksiyasi biron bitta sozdigi bitta harfni mb_strpos ichiga yozse brauzerda uwa 
+harfni kaliti yani soni chiqib keladi misol uchun botta П dip yozdi brauzerda 0 chiqib keldi chunki 0 dan bowlanadi qator 
+1 dan mas. Kegin yana bitta narsa agar uwa harf sozdami qatordami yana iwlatilgan bosa  unda birinchi keliwidan kegingi 
+lyuboy sonni qoyse uwa tori son chiqib keladi 
+
+if (mb_strpos($str, 'П', 0) !== false) {// botta П harfi bormi yomi usloviyada tekwirvomiz elseda yo dip chiqvoti chunki 
+П harfi 0 ga teng 0 bosa false false digani yo digani uwanichun bor bosayam yo divotti
+	echo "OK";
+}else{
+	echo "NO";
+}
+
+MB_STRTOUPPER FUNKSIYASI QATORDAGI SOZLARNI BRAUZERDA KOTTA YOZUDA CHIQAR BERADI SOZLANI. 
+KODLARI:
+$str = 'привет меня зовут крид';
+echo mb_strtoupper($str);// MB_STRTOUPPER FUNKSIYASI QATORDAGI SOZLARNI KOTTA YOZUDA CHIQAR BERADI SOZLANI. 
+
+
+mb_strtolower funksiyasi qatordigi sozlani kichnina harfda qilib brauzerda chiqarberadi 
+kodlari:
+$str2 = ' ПРИВЕТ МЕНЯ ЗОВУТ КРИД';
+echo mb_strtolower($str2);
+
+
+Mb_substr funksiyasi orqali textdan harflani optawasa boladi yokida oxiridi harflani chiqarsa boladi
+kodlari:
+$str = 'привет меня зовут крид';
+echo mb_substr($str, -3,);//mb_substr funksiyasi ichiga son yoziladi agar ichiga 3 sonini yozse sozdan 3 ta harfni 
+optawab qogan harflani chiqar beradi. Agar uwa 3 sondan kegin , qoyib yana nechidir son yozse misol uchun 5 sonini yozse
+3 ta harfdan kegingi 5 ta harfni chiqar beradi qogan harflani chiqarmidi yana harf bosa. agar 3 ozini yozmasdan -3 qise 
+textmizni oxiridi 3 ta harfni chiqar beradi 
+
+
+
+htmlspecialchars funksiyasi brauzerga misol uchun hozi kino tawab qoydib htmlspecialchars funksiyasini yozse brauzerda
+qanaqibqoyganim hamma html kodlari chiqib keladi
+$str = ' <h1><i>привет</i> меня зовут <b>Kрид</b></h1><iframe src="V_pogone_za_schastem-490mb.mp4" 
+height="100%" width="100%"></iframe>';
+echo htmlspecialchars( $str);
+
+
+htmlspecialchars_decode funksiyasi htmlspecialcharsni teskarisi htmlspecialcharsda qoygan kinoyimizi kodlarini korsatsa
+kino ozi yo bob qosa a htmlspecialchars_decode посмотреть код страницы digi kodni qoyib kegin htmlspecialchars_decode 
+yozse kino chiqib keladi
+$str = '&lt;h1&gt;&lt;i&gt;привет&lt;/i&gt; меня зовут &lt;b&gt;Kрид&lt;/b&gt;&lt;/h1&gt;&lt;iframe src=&quot;V_pogone_za_schastem-490mb.mp4&quot; 
+height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;gt';
+
+echo htmlspecialchars_decode($str);
