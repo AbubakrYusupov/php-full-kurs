@@ -1,0 +1,39 @@
+EXPLODE funkiyasi qatorni bolib tawlidi va qatorni massivga aylantiradi misol uchun qator ichiga 3 ta ism yozdi bitta 
+qilib. explode funksiyasini yozse jovobi qatorni massivga aylantirib bitta qib yozgan ismimiz 3 ga bolinadi 
+va massivni kaliti 3 ta boladi [0]  [1]  [2] .
+Kodlari:
+$str = 'Tolaganov Xumoyuddin Muxiddinovich';
+$bolamiz = explode(' ', $str);// botta explode funksiyasi orqali tepadigi bitta qatorni 3 ga bolamiz
+print_r($bolamiz);//print_r orqali brauzerda jovobini koramiz 
+
+IMPLODE funksiyasi explode funksiyasini teskarisi explode qatorni massivga aylantirsa. Implode massivni qatorga aylantiradi
+Kodlari:
+$str = ['Tolaganov', 'Xumoyuddin', 'Muxiddinovich'];// botta 3 ta massiv ochdi
+echo $yegamiz = implode(' ', $str);// implode funkiyasi tepadigi yozgan 3 ta massivni bitta qilib yegib qatorga aylantiradi
+
+
+TRIM funkiyasi qator tawase yoki tabda joy tawase yobomasam qanaqadur simvolla yozse !.. mmisol mawnaqa uwalani ochirib 
+tawidi.
+kodlari:
+$str = "\n<p>Hello</p>\n";
+$str .= "\n<p>World</p>\n";
+echo trim($str);// trim funksiyasi orqali 1 qator joy tawalsa yoki tabda qanchadur joytawalsa trim funksiyasini 
+yozse uwa joy tawalganini ochirib tawidi yoki qanaqadur simvolla yozse ulaniyam ochirib tawidi
+//echo $str;
+
+Kegin yana rtrim bilan ltrim funkiyalari bor misol uchun bitta soz yozdi sozzi orqasiga kegin oldiga , qoydi trim 
+funksiyasini yozse kegin uwa simvolli yani , belgilase oldindiniyam orqadiniyam ochirib tawidi. 
+A rtim funksiyasi ong tomondini ochirmidi chap tomondini ochiradi.
+Ltrim funksiyasi chap tomondini ochirmidi ong tomondini ochirib tawidi
+kodlari:
+
+$str = ', the best,';//botta ong tomongayam chap tomongayam , qoydi 
+echo rtrim($str, ',');// rtimda hozi brauzerda jovobida ong tomondi qoladi chap tomondi ochib ketadi. 
+ltrimda  bosa teskarisi chap tomondi qoladi ong tomondi ochib ketadi. trimda bosa ikkala tomondiyam ochib ketadi  
+
+
+NL2BR funksiyasi brga oxwap joy tawidi faqat farqi nl2br funksiyasi \n bilan iwlidi farqi wu
+kodi:
+
+$str = "hello world";// botta \n bilan soz yozvomiz
+echo nl2br($str);//nl2br funksiyasi \n bilan iwlidi nl2br funksiyasi br ga oxwap qator tawidi faqat nl2br funksiyasi farqi
