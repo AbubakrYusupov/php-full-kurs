@@ -1,0 +1,51 @@
+SUM() kodi orqali 1-elementni 2-elementga +  -  *  / boladi. sum() kodi function ichida iwlidi
+
+require_once 'fun.php';//require_once kodi orqali fun.php fayldigi kodlani index.phpga otqizvomiz
+$x = 100;
+$y = 20;
+
+function sum($a = 1, $b = 2){// sum() funkisyasida 1-elementni 2-elementga +  -  *  / boladi. Mana botta sum() funksiyasi ichida a va b bor. 
+kegin yana bitta narsa botta a = 1ga teng, b = 2ga teng qip yozip qoyganman  
+	$a = 300;// botta a 300ga teng
+	echo $a + $b;// botta a ga b qowilvotti
+	echo "<br>";// brda biza bir qator tawavomiz
+}
+$a = 255;//botta a ozgaruvchisi 255ga teng
+
+sum(5, 7);// mana botta 5 a vazifasini 7 b vazifasini bajaradi lekin a ni funksiyada 300ga teng qip qoyganmiza wunichun 5mas 300ga 7ni qowadi = 307 boladi
+sum(5, 10);
+sum(10, 10);
+sum($x, $y);//sum() funksiyasini ichiga yozilgani uchun $xsam $yyam bir biriga qowiladi agarda sum() funkisayida ayru yozilgan bosa $x ayru $y boladi
+sum(100);//botta 100 soni yozilgan agar sum() ichiga bitta son yozilsa tepadiladaka 2 ta son yozlimasa aftomaticheski 100 a vazisasini otidide kegin 
+100ga + b qowiladi b boya yozdim 2ga teng jovobi 102 boladi
+
+echo $a;//botta  $a ozgaruvchisini chiqarvomiz
+
+& bu operatr orqali misol uchun function ichiga $a ni yozdi u 300ga teng kegin a ni orqasiga &ni qoyse kegin bowqa joyda a digan ozgaruvchi ochsede uni
+100ga teng qise functiondi a ni orqasiga & qoymase ozgaruvchi a iwlidi agarda functiondi a ga & qoyse unda functiondi a iwlidi
+function sum($a, $b){
+	echo $a + $b;// botta a ga b qowilvotti
+	echo "<br>";//brda bitta qator tawalvotti
+	$a = 100;//a 100ga teng
+}
+
+$a = 5;// botta a ozgaruvchisi 5ga teng
+$b = 10;// botta b ozgaruvchisi 10ga teng
+echo $a;// echoda brauzerda a ozgaruvchisini nechiga tengligini  chiqar beradi
+echo "<br>";// br bitta qator tawidi
+sum($a,$b);// botta aga b qowilvotti = 15 boladi
+echo $a;//botta yana a ozgaruvchisi nechiga teng bosa uwani chiqaradi a 5ga teng 5wi chiqaradi. Lekin sum() funkisayida a ni 100ga teng qip qowganmiz agar 
+function sum($a, $b) wuni ichiga a ni orqasiga & qoyse  sum(&$a, $b) bizani a ozgaruvchimizmas sum()di a iwlidi
+
+
+RETURN kodi ekranga brauzerga jovobini chiqarbermidi a qaytaradi. Misol uchun bitta saytga registratsiya qise  otta proverka bor funksiya yozaman agar oti bazada bosa
+bowqattan reg bomasdan saytga kirib ketvursin buni  kod tekwiriwga funksiya yozdide  return berdi funksiya tekwiradi kodga etadi bu odam bor dp kegin usloviyaga
+qoyip qoyamiz agar bosa saytga kirsin  bomasa regdan otsin dp. 
+KODLARI:
+function sum($a, $b){
+	$c = $a + $b;//botta  a ga b qowilvotti
+	echo $c;// kegin echo yordamida brauzerda ochvomiz
+	return $c;// return kodida yozgan narsamiza brauzerda chqmidi
+}
+
+//echo sum(1,2);echo yordamida brauzerda yozgan kodimiz chiqadi agar echo yozmase hich balo chqmidi
