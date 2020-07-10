@@ -1,0 +1,26 @@
+<?php 
+headerni 2ta elementi bor 1-exit, 2-kodirovka
+exitda pastda yozilgan misol uchun index.phpga inc.phpni uladi ikkalasidayam soz bor exitti yozse index.phpdi soz brauzerda
+chiqmidi.
+kordirovka kirilcha yozse kawa bopketmasligi uchun kere misol uchun bitta soz yozse brauzerda vawe bowqa harfla chiqib kesa
+uwani togirlawga kordirovka kere boladi lekin bu narsa bizaga keremas chunki bizani vaqt kelib bu narsani yechimi topilgan
+
+require_once 'inc.php';//require_once kodi orqali index.phpga inc.phpni ulavomiz
+header('Content-Type: text/html; charset=utf-8');
+header('refresh: 5; url=inc.php');//botta 5 sekunddan kegin inc.php iwlasin divomiza 5 sekunddan kegin inc.phpdi soz 
+chiqvoti
+//exit;//exit yozse htmldi привет люди sozi iwlamidi exit opqoyse iwlidi 
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--<meta charset="UTF-8">-->
+	<title>Document</title>
+</head>
+<body>
+		
+	<?=$test?>
+	привет люди 
+
+</body>
+</html>
