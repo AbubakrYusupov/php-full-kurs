@@ -1,0 +1,13 @@
+metod POSTda misol uchun registratsiyadan otvotkan bose danniylani yozvotkanimizada post metodini yozse skritiy boladi korinmidi vzlom qiliwligi qiyin boladi 
+agar post metodini yozmase poisk beradigan joyda misol uchun ismimizani yozgan bose wundo kornip turadi
+
+	<form method="post" action="inc.php"> botga post metodini yozganmiza
+		<p>
+			<input type="text" name="name" placeholder="Напишите свое имя">mana botga ism yoziw kere isimni yozse brauzerda anu poisk beradigan joyda korinmidi post metodini yozse
+		</p>
+		<p>
+			<button type="submit" name="name" value="test">Send</button>
+		</p>
+	</form>
+
+Get metodda skritiy bmidi wundo korinib turadi
