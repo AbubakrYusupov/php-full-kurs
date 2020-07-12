@@ -1,0 +1,16 @@
+$_FILES kodi orqali uburasmnimi faylnimi zagruzka qivosa boladi 
+		<p>
+			<input type="file" name="file">input tegi orqali files kodini iwlatvomiza usiz iwlat bomidiinput teginiyam yozip fileni ulaw kere
+		</p>
+    
+if (!empty($_FILES) ){//files kodi orqali faylni zagruska qivosa boladi
+	echo '<pre>';//pre orqali qator tawab tawab ciqarberadi yozgan narsalarimizi
+	print_r($_FILES);
+	echo '</pre>';
+	move_uploaded_file($_FILES['file']['tmp_name'], 'upload/' . $_FILES['file']['name']);//move_uploaded_file orqali fayni zagruzka qiladigan joyini belgilavomiz upload papkaga
+  files masivi ichidi fileni massivni ichidi name kalitini belgiladi kegin wunda upload papkaga zagruzka boldi
+}
+
+hop brauzerda bu kodlani yozse viberite fayl knopkasi chiqadi uwanga bosamiza kegin moy kompyuterdan holagan rasmimizani olamiza kegin uploadga export qilamiza
+
+$_SERVER kodida serverdigi hamma informatsiyalani brauzerda korsatadi 
