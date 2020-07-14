@@ -1,0 +1,8 @@
+SESSION kodida malumotni saqlab qolsa boladi bitta faylga sessionda kodla yozse kegin avtomaticheskiy  bitta fayl ochiib uwanda saqlanib qoladi
+session_start();// session_startda sessionni ochvomiza 
+_SESSION['names'] = 'alik';
+$_SESSION['login'] = 'alik';
+print_r($_SESSION); 
+//unset($_SESSION['names']);//unset kodida belgilagan ozgaruvchimiz ochib ketadi
+//session_unset();//session_unset kodida sessiondi hamma ozgaruvchilani ochirip tawidi fayldi hammasini brauzerdi qovuradi
+//session_destroy();//session_destroy kodi faylni ozini ochirib tawidi agarda yozgan kodimizani komentga ose fayl bowqattan paydo bopqoladi
