@@ -1,0 +1,61 @@
+COPY funksiyasida fayldan faylga ubu narsami kodlami kochirse boladi
+copy('sess2.php', 'index.php');// copy funksiyasida fayldan faylga yozgan kodlarimizani kochirse boladi misol uchun hozi sess2.php faylidan index.php faylga yozgan hamma 
+kodlarimizani kochirdim copy funksiyasini ichida 2 ta yozadigan narsa boladi 1-siga ichida kodla bor kochirmoqchi bogan faylimizani otini yozamiza 2-siga bosa bombow faylni 
+otini yozamiza wunda 1-faylda nima bor bosa hamma sini 2-faylga kochiradi
+
+
+FILE_EXISTS - Belgilangan fayl yoki katalog mavjudligini tekshiradi 
+if (file_exists('index.php')) echo "Файл существует";// file_exits funksiyasida belgilavotkan faylimiza bormi yokida yoqmi tekchiradi ha ayltkancha faqat faylnimzas papkasniyam 
+tekchirsa boladi file_exits ichiga holagan kiritmoqchi bogan faylimizani kiritamiza botta hozi biza wart bervomiza index.php bormi yokida yoqmi dip bor bosa ifga yozgan 
+sozimizani yoq bolsa elsega yozgan sozimizani chiqar beriwi kere
+else echo "Такого файла нет";
+
+
+FILE_GET_CONTENTS funksiyasi yozgan narsamizani oqidi va brauzerga yozgan narsamizani chiqar beradi
+echo $file = file_get_contents('index.php');
+ echo $file = file_get_contents('https://www.youtube.com/');//file_get_contents funksiyasi yozgan narsamizani oqidi va brauzerda chiqar beradi
+ 
+ 
+ FILE_PUT_CONTENTS Faylga ma'lumotlarni yozadi
+$file = file_get_contents('https://www.youtube.com/'); yozgan narsamizani file_get_contentsda oqimiza kegin oqiganarsamizani file_put_contentsda yozamiza
+file_put_contents('index.php', $file);//file_put_contents funksiyasi file_get_contents belgilagan faylimizani yokida ubu saytni belgilagan bose uwani hamma kodlarini belgilagan 
+file_put_contents funkiyamizadi faylimizaga tawidi
+ 
+
+FILE  funksiyasi massivni oqidi
+$file = file('index.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);//FILE_IGNORE_NEW_LINES kodi massivdagi ochiq joylarini olib tawlidi bowjoylani, FILE_SKIP_EMPTY_LINES 
+bu kod bosa bow massivni olib tawlidi misol uchun massiv ochidide lekin ichiga hich nima yozmadi mawi kodni yozse uwa massivni olib tawlidi
+echo "<pre>";
+print_r($file);// file funksiyasi yozgan narsamizani oqidi file_get_contentsdan farqi bu file_get_contents qaotorni oqidi a file funksiyasi massivni oqidi to est massivga 
+aylantiradi yozgan narsamizani
+echo "</pre>";
+
+
+IS_DIR funksiyasi papka bormi yokida yoqmi tekshiradi
+if (is_dir('upload')) echo "bu fayl";//is_dir funksiyasi belgilavotkan narsamiza papka yokida papkamasligini tekshiradi misol uchun mani kompyuutermda upload digan papka bor 
+hozi uwani is_dir ichiga belgiladim endi brauzerda ifni jovobi chiqishi kere agar is_dir ichiga faylni yozsam unda else brauzerda chiqadi
+else echo "bu faylmas";
+
+
+IS_FILE is_dir funksiyasini teskarisi is_dir papka bormi yoqmi tekshirsa is_file fayl bormi yokida yoqmi tekwiradi
+if (is_file('index.php')) echo "bu fayl";
+else echo "bu faylmas";
+
+
+RENAME funksiyasida faylni otini ozgartirsa boladi
+rename('index.php', 'index.php2');//rename funksiyasida faylni iotini ozgartirsa boladi birinchisiga oldingi otini ikkinchisiga qoymoqchi bogan otimmizani qoyamiza wunda 
+hudda wunga oxwaga fayl ochiladi
+
+
+mkdir('papka/2ch/3chi', 0777, true);//mkdir funksiyasida papka ochsa boladi mkdir ichiga ochmoqchi bogan papkamizani otini yozse boldi kegin brauzerda obnovit qise ochiladi
+bittada agarda papkani ichida yana papka uniyam ichida yana papka ochmoqchi bose tepada turgandaka 0777 bilan true yoziwimiz kere
+
+
+RMDIR funksiyasi belgilagan papkamizani ochirip tawidi
+rmdir('upload');//rmdir funksiyasi belgilagan papkamizani ochirip tawidi
+
+TOUCH funksiyasi orqali vaqtni ozgartirse boladi 
+touch('upload', time()-3600);//touch funksiyasida papka yokida faylni ochgan vaqtimizani ozgartirse boladi time orqali
+
+
+unlink('index.php');//unlink funksiyasida faylni ochirip tawa boladi
