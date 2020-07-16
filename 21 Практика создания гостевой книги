@@ -1,0 +1,82 @@
+<?php 
+
+require_once 'func.php';
+if (!empty($_POST)){
+	save_mess();
+	header("Location: {$_SERVER['PHP_SELF']}");
+	exit;
+}
+
+echo $messages = get_mess();
+$messages = array_mess($messages);
+//print_arr($messages);
+ ?>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Гостевая книга</title>
+
+
+<style>
+	.message{
+		border: 1px solid blue;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+</style>
+ </head>
+ <body>
+ 	<form action="index.php" method="post">
+ 		<p>
+ 			<label for="name">Имя:</label><br>
+ 			<input type="text" name="name" id="name"> 
+ 		</p>
+ 		<p>
+ 			<label for="text">Текст:</label><br>
+ 			<textarea name="text" id="text"></textarea>
+ 		</p>
+ 		<button type="submit">Написать</button>
+ 	</form>
+
+ 	<hr>
+
+ 	<?php if(!empty($messages)): ?>
+ 		<?php foreach ($messages as $message): ?>
+ 			<?php $messages = get_format_message($message);?>
+ 			<div class="message">
+ 				<p>Автор: <?=$message[0]?> | Дата: <?=$message[2]?></p>
+ 				<div><?=nl2br($message[1])?></div>
+ 			</div>
+ 	    <?php endforeach; ?>
+ 	<?php endif; ?>
+ </body>
+ </html>
+ 
+ 
+
+
+ <?php 
+function save_mess(){
+	$srt = $_POST['name'] . '|' . $_POST['text'] . '|' . date('Y-m-d H:i:s'). "\n***\n";
+	file_put_contents('gb.txt', $srt, FILE_APPEND);
+}
+
+function get_mess(){
+	return file_get_contents('gb.txt');
+}
+
+function array_mess($messages){
+	$messages = explode("\n***\n", $messages);
+	array_pop($messages);
+	return array_reverse($messages);
+}
+
+function get_format_message($message){
+	return explode('|', $message);
+}
+
+function print_arr($arr){
+	echo "<pre>" . print_r($arr, true) . "</pre>";
+}
