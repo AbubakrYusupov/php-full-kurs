@@ -1,0 +1,36 @@
+
+$db = @mysqli_connect('sayt1.loc', 'root', '', 'gb') or die('Ошибка соединения с БД');//mysqli_connect funksiyasini ichiga  bd narsala yoziladi birinchisiga localhost yokida 
+saytimizani otini yozamiza ikkinchisiga bosa bazadannixga kirvotkanda chiqadigan otti yozamiza uchinchisiga agar yozgan bose bazadannixdi parolni yozamiza tortinchisiga bizani
+ochgan bazadanniximizani ottini yozamiza mysqli_connect wunda bdga ulanamiza
+
+
+
+if(!$db) die(mysqli_connect_error());//mysqli_connect_error funksiyasi hato qise hatoni etadi
+
+
+MYSQLI_QUERY funksiyasi orqali redaktordayam yozip bdda tablitsa ochsa boladi
+$insert = "INSERT INTO bg (name, text) VALUES ('Оля', 'Lorem ipsum dolor sit amet, consectetur adipisicing.')";
+$res_insert = mysqli_query($db, $insert);// mysqli_query funksiyasi orqali baza dannix yani qisqacha bdda tablitsa ochsa boladi mawi funksiya orqali
+if ($res_insert) echo "ok"; 
+else echo "error";
+echo mysqli_error($db);
+
+
+DELETE kodi orqali bddi tablitsani ochirb tawasa boladi 
+$delete = "DELETE FROM bg WHERE id = 7";// delete kodi orqali biza bddi tablitsani ochirib tawase boladi ochirib tawadiyam yana bitta narsani etib qoyi bulani hammasini bdni 
+ozidayam qisa boladi ochirib tawab yokida yana tablitsa qowsa boladi 
+$res_delete = mysqli_query($db, $delete) or die(mysqli_error($db));
+//echo  mysqli_affected_rows($db);//mysqli_affected_rows kodi bizaga nimani ochirib tawaganimizani brauzerda korsat beradi bu kod wunga kere
+
+
+$res = mysqli_query($db, "SELECT id, name, text, date FROM bg");
+//$data = mysqli_fetch_all($res, MYSQLI_ASSOC);// MYSQLI_ASSOC kodi orqali bddi tablitsamizdi id name text datelani hammasini brauzerda kalit bob chiqvotti. mysqli_fetch_all 
+bddi tablitsamizani hamma danniylani brauzerda massiv qilib chiqar bervotti
+
+
+MYSQLI_REAL_ESCAPE_STRING funksiyasida ubu sozni kovichkada yzsayam hato bermidi
+$str = "d'Artanian";
+$str = mysqli_real_escape_string($db, $str);//mysqli_real_escape_string funsiyasida agar ubu sozni tepadigi kavichkada yozse misol uchun o'qi sozini iwlamidi brauzerda hato
+beradi ' yozganimiz uchun ' agar mysqli_real_escape_stringni yuozse bunaqa hato bermidi
+$query = "INSERT INTO bg (name, text) VALUES ('$st'r, 'Имя с апострофом')";
+mysqli_query($db, $query) or die(mysqli_error($db));
