@@ -1,4 +1,4 @@
-
+mysqli_connect funksiyasida bdni ulavomiza
 $db = @mysqli_connect('sayt1.loc', 'root', '', 'gb') or die('Ошибка соединения с БД');//mysqli_connect funksiyasini ichiga  bd narsala yoziladi birinchisiga localhost yokida 
 saytimizani otini yozamiza ikkinchisiga bosa bazadannixga kirvotkanda chiqadigan otti yozamiza uchinchisiga agar yozgan bose bazadannixdi parolni yozamiza tortinchisiga bizani
 ochgan bazadanniximizani ottini yozamiza mysqli_connect wunda bdga ulanamiza
