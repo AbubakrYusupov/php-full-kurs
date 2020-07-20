@@ -1,0 +1,90 @@
+<?php 
+require_once 'func.php';// require_once kodi orqali func.php faylini index.php fayliga ulavomiza
+require_once 'connect.php';// require_once kodi orqali connect.php faylini index.php fayliga ulavomiza
+
+if (!empty($_POST)){
+	save_mess();
+	header("Location: {$_SERVER['PHP_SELF']}");
+	exit;		
+}
+
+$messages = get_mess();
+print_arr($messages);
+
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гостевая книга</title>
+
+<style>
+		
+	.message{
+		border: 1px solid #ccc;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+</style>
+
+</head>
+<body>
+	<form action="index.php" method="post">
+		<p>
+			<label for="name">Имя:</label><br>
+			<input type="text" name="name" id="name">// botta imput ochvomiza 
+	    </p>
+	    <p>
+	    	<label for="text">Текст:</label><br>
+	    	<textarea name="text" id="text"></textarea>//botta text ochvomiza
+	    </p>
+	    <p>
+	    	<button type="submit">Написать</button>// botta buttonni ochvomiza
+	    </p>
+	</form> 
+
+	<hr>
+	    
+	<?php if(!empty($messages)): ?>
+		<?php foreach ($messages as $message): ?>
+			<div class="message">
+				<p>Автор: <?=$message['name']?> | Дата: <?=$message['date']?></p>// botta avtor bilan datani chiqarvomiza
+				<div><?=nl2br(htmlspecialchars($message['text']))?></div>
+			</div>
+		<?php endforeach; ?>
+	<?php endif; ?>
+
+</body>
+</html>
+
+
+
+
+
+<?php 
+
+function clear(){
+	global $db;
+	foreach ($_POST as $key => $value) {
+		$_POST[$key] = mysqli_real_escape_string($db, $value);
+	}
+}
+
+function save_mess(){
+	global $db;
+	clear();
+	extract($_POST);
+	$query = "INSERT INTO bg (name, text) VALUES ('$name', '$text')";
+	mysqli_query($db, $query);
+}
+
+function get_mess(){
+	global $db;
+	$query = "SELECT * FROM bg ORDER BY id DESC";
+	$res = mysqli_query($db, $query);
+	return mysqli_fetch_all($res, MYSQLI_ASSOC);
+}
+
+function print_arr($arr){
+	echo "<pre>" . print_r($arr, true) . "</pre>";
+}
